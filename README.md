@@ -5,4 +5,5 @@ Bilingual personal homepage (English / 中文) based on [academicpages](https://
 - English: https://wkb2333.github.io
 - Chinese: https://wkb2333.github.io/zh/
 
-Use **English / 中文** in the header to switch. Blog posts in `_posts/` need `lang: en` or `lang: zh`.
+Use **English / 中文** in the header to switch About / Publications / Projects / CV.
+Blog is shared: https://wkb2333.github.io/blog/

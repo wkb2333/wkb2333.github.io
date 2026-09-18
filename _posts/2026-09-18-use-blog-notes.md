@@ -1,7 +1,7 @@
 ---
 title: "用博客记学习笔记"
 lang: zh
-lang_switch: /blog/
+lang_switch: /
 date: 2026-09-18
 categories:
   - 学习笔记
@@ -9,20 +9,45 @@ tags:
   - 说明
 ---
 
-之后会在这里写论文阅读、课程笔记和实验记录。
+中英导航都指向同一份博客。文章用 **Markdown** 写（需要时也可以直接写 HTML），放在 `_posts/YYYY-MM-DD-标题.md`。
 
-英文笔记在 **English → Blog**。每篇文章在文首加上 `lang: zh` 或 `lang: en`，就会只出现在对应语言的博客列表里。
+主题已支持：公式（MathJax）、流程图（Mermaid）、交互图（Plotly）。写法示例见正文下面。
 
-新增文章：在 `_posts/` 下新建 `2026-09-18-标题.md`，例如：
+## 公式
 
-```markdown
----
-title: "笔记标题"
-lang: zh
-date: 2026-09-20
-categories:
-  - 学习笔记
----
+公式用 `$$...$$`：
 
-正文。
+$$
+\mathcal{L} = -\sum_{i} y_i \log \hat{y}_i
+$$
+
+## 流程图
+
+```mermaid
+flowchart LR
+  A[读论文] --> B[写笔记]
+  B --> C[实验]
+  C --> B
+```
+
+## 交互图
+
+鼠标可悬停查看数值：
+
+```plotly
+{
+  "data": [
+    {
+      "x": [1, 2, 3, 4],
+      "y": [0.62, 0.71, 0.74, 0.81],
+      "type": "scatter",
+      "mode": "lines+markers",
+      "name": "NDCG@10"
+    }
+  ],
+  "layout": {
+    "xaxis": {"title": "epoch"},
+    "yaxis": {"title": "score"}
+  }
+}
 ```
