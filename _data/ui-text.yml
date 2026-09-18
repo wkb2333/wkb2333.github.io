@@ -314,6 +314,8 @@ zh: &DEFAULT_ZH
   loading_label              : "加载中..."
 zh-CN:
   <<: *DEFAULT_ZH
+  feed_label                 : "RSS"
+  site_map                   : "网站地图"
 
 # Chinese (traditional)
 # -----------------

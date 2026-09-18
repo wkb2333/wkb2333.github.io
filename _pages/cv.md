@@ -2,6 +2,8 @@
 layout: archive
 title: "CV"
 permalink: /cv/
+lang: en
+lang_switch: /zh/cv/
 author_profile: true
 redirect_from:
   - /resume
@@ -46,7 +48,7 @@ Publications
 
 Selected projects
 ======
-  <ul>{% for post in site.portfolio %}
+  <ul>{% for post in site.portfolio reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 

@@ -1,6 +1,8 @@
 ---
 permalink: /
 title: "About"
+lang: en
+lang_switch: /zh/
 author_profile: true
 redirect_from:
   - /about/
@@ -10,6 +12,8 @@ redirect_from:
 I am **Kaibo Wang** (王凯渤), an MSc student in Artificial Intelligence at [King's College London](https://www.kcl.ac.uk/). I previously received a B.Eng. in Data Science and Big Data Technology from [Beijing Institute of Technology](https://english.bit.edu.cn/).
 
 My work is on **information retrieval and recommender systems**, especially sequential / cross-domain ranking, LLM for RecSys, and spatiotemporal representation learning. I care about methods that still work under sparsity, distribution shift, and real-system constraints.
+
+Notes and reading logs are on the [Blog](/blog/). Switch to [中文](/zh/) in the header.
 
 ## Education
 

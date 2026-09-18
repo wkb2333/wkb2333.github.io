@@ -1,14 +1,15 @@
 ---
 layout: archive
-title: "Publications"
-permalink: /publications/
-lang: en
-lang_switch: /zh/publications/
+title: "论文"
+permalink: /zh/publications/
+lang: zh
+lang_switch: /publications/
 author_profile: true
 ---
 
+{% assign i18n = site.data.i18n.zh %}
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">也可以在 <a href="{{site.author.googlescholar}}">Google Scholar</a> 查看。</div>
 {% endif %}
 
 {% include base_path %}
@@ -21,7 +22,13 @@ author_profile: true
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        {% if category[0] == "manuscripts" %}
+          <h2>{{ i18n.pub_journal }}</h2><hr />
+        {% elsif category[0] == "conferences" %}
+          <h2>{{ i18n.pub_conference }}</h2><hr />
+        {% else %}
+          <h2>{{ category[1].title }}</h2><hr />
+        {% endif %}
         {% assign title_shown = true %}
       {% endunless %}
       {% include archive-single.html %}

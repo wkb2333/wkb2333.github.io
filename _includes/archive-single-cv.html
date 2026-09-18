@@ -6,7 +6,10 @@
   {% assign teaser = site.teaser %}
 {% endif %}
 
-{% if post.id %}
+{% assign page_lang = page.lang | default: "en" %}
+{% if page_lang == "zh" and post.title_zh %}
+  {% assign title = post.title_zh %}
+{% elsif post.id %}
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
   {% assign title = post.title %}
